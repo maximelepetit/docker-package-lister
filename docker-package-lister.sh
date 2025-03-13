@@ -16,8 +16,8 @@ docker run --rm -dit --name $CONTAINER_NAME $IMAGE_NAME bash
 # Check if R is installed
 if docker exec -it $CONTAINER_NAME sh -c 'command -v R > /dev/null'; then
     echo "Extracting R packages..."
-    docker exec -it $CONTAINER_NAME R -q -e 'write.table(installed.packages()[,"Version"], "/list_r_packages.txt", sep="\t")'
-    docker cp $CONTAINER_NAME:/list_r_packages.txt .
+    docker exec -it $CONTAINER_NAME R -q -e 'write.table(installed.packages()[,"Version"], "/list_r_packages.txt", sep="\t")' > /dev/null
+    docker cp -q $CONTAINER_NAME:/list_r_packages.txt .
 else
     echo "❌ R is not installed in this image."
 fi
