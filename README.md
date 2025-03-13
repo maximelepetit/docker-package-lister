@@ -40,9 +40,9 @@ The script will generate the following files in the output folder:
 - **list_system_packages.txt** : List of installed system packages (depending on the detected OS).
 
 ## Supported OS Types
-- **Ubuntu/Debian**: Extracts system packages using dpkg.
-- **Alpine**: Extracts system packages using apk.
-- **RHEL/CentOS/Fedora**: Extracts system packages using rpm.
+- **Ubuntu/Debian**: Extracts system packages using ```dpkg```.
+- **Alpine**: Extracts system packages using ```apk```.
+- **RHEL/CentOS/Fedora**: Extracts system packages using ```rpm```.
 ## License
 This project is licensed under the GPL-3.0 License - see the [LICENSE](https://github.com/maximelepetit/docker-package-lister/blob/main/LICENSE) file for details.
 
